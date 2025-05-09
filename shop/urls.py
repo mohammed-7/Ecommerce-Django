@@ -6,4 +6,5 @@ urlpatterns = [
     path('', views.card, name='card'),
     path('', views.carousel, name='carousel'),
     path('', views.star, name='star'),
+    path('product/', views.product, name='product'),
 ]

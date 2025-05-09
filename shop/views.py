@@ -18,3 +18,6 @@ def carousel(request):
 def star(request):
     return render(request, 'shop/star.html')
 
+def product(request):
+    return render(request, 'shop/product.html')
+

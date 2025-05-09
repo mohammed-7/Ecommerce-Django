@@ -4,7 +4,7 @@
 {% load static %}
 
 <div class="card card-fixed">
-    <a href="#">
+    <a href="{% url 'product' %}" >
   <img
     src="{% static 'shop/images/dog.jpg' %}"
     class="card-img-top"
@@ -14,7 +14,7 @@
   </a>
   <div class="card-body">
     <h5 class="card-title">Shiba-Inu </h5>
-    <a href="#" class="custom-link">
+    <a href="{% url 'product' %}" class="custom-link">
         Shiba-Inu Dog for Sale
     </a>
 
