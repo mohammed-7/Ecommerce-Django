@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-inner img {
+    object-fit: cover;  /* Ensures images cover the area without stretching */
+    height: 400px;      /* Adjust this to your preferred height */
+}
+
+.section-gap {
+    margin-top: 40px;
+}
+
+.custom-link {
+    
+    text-decoration: none;
+    color: inherit;
+}
+
+.custom-link:hover {
+    
+    color: red;
+}
+
+.card-fixed {
+    width: 260.39px;
+    height: 551.9px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.card-text {
+    flex: grow 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+

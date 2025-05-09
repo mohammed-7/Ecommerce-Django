@@ -1,0 +1,62 @@
+<!-- Include Bootstrap CSS and Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Star Rating Component -->
+<div class="star-rating d-flex align-items-center gap-1">
+  <i class="bi bi-star" data-value="1"></i>
+  <i class="bi bi-star" data-value="2"></i>
+  <i class="bi bi-star" data-value="3"></i>
+  <i class="bi bi-star" data-value="4"></i>
+  <i class="bi bi-star" data-value="5"></i>
+</div>
+
+<!-- Optional: Show selected rating -->
+<p id="rating-value" class="mt-2 text-muted">Rating: 0</p>
+
+<!-- Style -->
+<style>
+  .star-rating i {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #ccc;
+  }
+  .star-rating i.active {
+    color: gold;
+  }
+</style>
+
+<!-- Script -->
+<script>
+  const stars = document.querySelectorAll('.star-rating i');
+  const ratingValue = document.getElementById('rating-value');
+  let rating = 0;
+
+  stars.forEach((star, idx) => {
+    star.addEventListener('click', () => {
+      rating = star.getAttribute('data-value');
+      updateStars(rating);
+    });
+
+    star.addEventListener('mouseover', () => {
+      updateStars(star.getAttribute('data-value'));
+    });
+
+    star.addEventListener('mouseout', () => {
+      updateStars(rating);
+    });
+  });
+
+  function updateStars(rating) {
+    stars.forEach((star, i) => {
+      if (i < rating) {
+        star.classList.remove('bi-star');
+        star.classList.add('bi-star-fill', 'active');
+      } else {
+        star.classList.remove('bi-star-fill', 'active');
+        star.classList.add('bi-star');
+      }
+    });
+    ratingValue.textContent = `Rating: ${rating}`;
+  }
+</script>

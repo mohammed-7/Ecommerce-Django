@@ -1,0 +1,33 @@
+{% load django_bootstrap5 %} 
+{% bootstrap_css %} 
+{% bootstrap_javascript %} 
+{% load static %}
+
+<div class="card card-fixed">
+    <a href="#">
+  <img
+    src="{% static 'shop/images/dog.jpg' %}"
+    class="card-img-top"
+    alt="Cute_dog"
+    style="height: 250px;object-fit: cover;"
+  />
+  </a>
+  <div class="card-body">
+    <h5 class="card-title">Shiba-Inu </h5>
+    <a href="#" class="custom-link">
+        Shiba-Inu Dog for Sale
+    </a>
+
+    <!--Included card component-->
+    {% include "shop/star.html" %}
+
+
+    <p class="card-text">
+      Some quick example text to build on the card title and make up the bulk of
+      the card’s content.
+    </p>
+    <div class="text-center mt-2">
+      <a href="#" class="btn btn-primary">Add to cart</a>
+    </div>
+  </div>
+</div>
