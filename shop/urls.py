@@ -7,4 +7,7 @@ urlpatterns = [
     path('', views.carousel, name='carousel'),
     path('', views.star, name='star'),
     path('product/', views.product, name='product'),
+    path('about/', views.about, name='about'),
+    path('careers/', views.careers, name='careers'),
+    path('cart/', views.cart, name='cart'),
 ]
