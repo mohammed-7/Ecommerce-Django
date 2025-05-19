@@ -3,37 +3,41 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {% bootstrap_css %} {% bootstrap_javascript %}
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'shop/css/style.css' %}">
-    <title>Bootstrap_site</title>
+{% bootstrap_css %} 
+  <link rel="stylesheet" href="{% static 'shop/css/style.css' %}">
+  <title>{% block title %}Ecommerce Site{% endblock  %}</title>
   </head>
   <body>
-    <nav class="nav bg-dark text-white ">
-      <a class="nav-link active" aria-current="page" href="/">Home</a>
-      <a class="nav-link" href="/about">About</a>
-      <a class="nav-link" href="/careers">Careers</a>
-      <span class="ms-auto"></span>
-      <a class="nav-link" href="/signin">Sign-in</a>
-      <a class="nav-link" href="/cart">Cart</a>
-      
-    </nav>
-<br>
+    <!-- Navbar -->
+    {% include "shop/navbar.html" %}
+
+    <!-- Main page Content -->
+    
+<div class="container mt-4">
+ {% block content %}{% endblock content %}
+</div>
+   
+
+
     <!--Included card component-->
-    <div class="container-fluid">
-        {% include "shop/carousel.html" %}
-    </div>
+    {% comment %} 
     
     <!--Gap  between sections-->
-    <div class="section-gap"></div>
+    <div class="section-gap"></div> {% endcomment %}
 
     <!--Included card component-->
     
-    <div class="container">
+    {% comment %} <div class="container">
       {% include "shop/card.html" %}
-    </div>
+    </div> {% endcomment %}
 
-    <h2>Hello World!!!</h2>
+
+
+    <!-- Bootstrap js -->
+    {% bootstrap_javascript %}
+    {% block extra_js %}{% endblock  %}
+    
   </body>
 </html>

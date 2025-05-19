@@ -1,0 +1,22 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+{% block title %}Home - Ecommerce{% endblock  %}
+
+{% block content %}
+
+    <!-- Carousel Section -->
+    <div class="container-fluid">
+        {% include "shop/carousel.html" %}
+    </div>
+
+    <!-- Section Gap -->
+     <div class="section-gap"></div>
+
+    <!-- Product Card Section -->
+     <div class="container">
+      {% include "shop/card.html" %}
+    </div>
+    <h2>Hello World!!!</h2>
+
+{% endblock  %}

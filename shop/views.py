@@ -7,7 +7,7 @@ from django.shortcuts import render , redirect
 #     return HttpResponse("Hello, world! This is the shop app.")
 
 def home(request):
-    return render(request, 'shop/base.html')
+    return render(request, 'shop/home.html')
 
 def card(request):
     return render(request, 'shop/card.html')
@@ -30,6 +30,8 @@ def careers(request):
 def cart(request):
     return render(request, 'shop/cart.html')
 
-def signin(request):
-    return render(request, 'shop/signin.html')
+
+
+def login(request):
+    return render(request, 'shop/login.html')
 
