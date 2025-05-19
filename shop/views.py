@@ -30,3 +30,6 @@ def careers(request):
 def cart(request):
     return render(request, 'shop/cart.html')
 
+def signin(request):
+    return render(request, 'shop/signin.html')
+
